@@ -1,12 +1,12 @@
 pipeline {
     agent any 
     stages {
-        stage name: 'Build', concurrency: 1{
+        stage ('Build'), concurrency: 1{
             steps {
                 echo 'Build in process' 
             }
         }
-        stage name: 'Test', concurrency: 1{
+        stage ('Testing'), concurrency: 1{
             steps {
                 echo 'Testing In process ?' 
             }
