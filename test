@@ -1,19 +1,19 @@
 pipeline {
     agent any 
     stages {
-        stage('Stage 1') {
+        stage name: 'Build', concurrency: 1{
             steps {
-                echo 'Hello world!' 
+                echo 'Build in process' 
             }
         }
-        stage('Stage 2') {
+        stage name: 'Test', concurrency: 1{
             steps {
-                echo 'How Are You ?' 
+                echo 'Testing In process ?' 
             }
        }
-       stage('Stage 3') {
+       stage('Deploy') {
             steps {
-                echo 'I am fine' 
+                echo 'Deploying' 
             }
        }
     }
