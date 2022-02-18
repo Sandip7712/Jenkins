@@ -6,19 +6,15 @@ pipeline {
                 echo 'Hello world!' 
             }
         }
-    }
-    stages {
         stage('Stage 2') {
             steps {
                 echo 'How Are You ?' 
             }
        }
-   }
-   stages {
-        stage('Stage 3') {
+       stage('Stage 3') {
             steps {
                 echo 'I am fine' 
             }
        }
-   }
+    }
 }
